@@ -9,7 +9,7 @@ with open('c:\obmen\import.csv', newline='') as csvfile:
         sp2=row[1]
         alkokode=row[2]
         if (sp2):
-            res = cur.execute("SELECT * FROM excise_stamp WHERE number='" + marka +"'")
+            res = cur.execute("SELECT * FROM excise_stamp WHERE number='" + marka +"' LIMIT 1")
             #if (res.fetchone() is None):
             massiv=res.fetchall()
             try:
