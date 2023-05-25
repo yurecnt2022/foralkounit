@@ -3,8 +3,8 @@ con = sqlite3.connect("C:\Users\Public\database.db")
 cur = con.cursor()
 
 with open('c:\obmen\import.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
-    for row in spamreader:
+    csvdata = csv.reader(csvfile, delimiter=';', quotechar='|')
+    for row in csvdata:
         marka=row[0]
         sp2=row[1]
         alkokode=row[2]
